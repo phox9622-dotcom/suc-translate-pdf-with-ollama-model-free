@@ -1,0 +1,300 @@
+
+
+
+
+
+
+
+
+
+
+الحمد لله
+اشتغل
+ترجمة كتاب بالذكاءالاصطناعى الكتاب صورة معها نص تمت الترجمة والمحافظة على الصور
+
+
+
+
+https://manus.im/app/7FgwK9JuLEVt73ULMoW29a
+
+
+
+
+
+
+((myenv) ) m@m-HP-Z440-Workstation:~/Desktop/translate$ ollama list
+NAME                                                          ID              SIZE      MODIFIED     
+qwen35b-16k:latest                                            1c033e46a6e4    13 GB     2 days ago      
+hf.co/chtisgit/Qwen3.6-35B-A3B-2Bit-GSQ-hybrid-GGUF:latest    bbbd241064a4    13 GB     6 days ago      
+hf.co/ISTA-DASLab/Qwen3-8B-GGUF-GSQ:Q2_K                      ff5a9ee63e34    3.3 GB    7 days ago      
+embeddinggemma-2:570m                                         899c39804f83    917 MB    2 weeks ago     
+bge-m3:latest                                                 790764642607    1.2 GB    2 weeks ago     
+nomic-embed-text-v2-moe:latest                                ff9c2f10ef5e    957 MB    2 weeks ago     
+qwen3-nvfp4:latest                                            0316999a2586    565 MB    3 weeks ago     
+qwen2.5-coder:7b                                              dae161e27b0e    4.7 GB    6 months ago    
+qwen3:4b                                                      359d7dd4bcda    2.5 GB    6 months ago    
+llama3.1:latest                                               46e0c10c039e    4.9 GB    6 months ago    
+nomic-embed-text:latest                                       0a109f422b47    274 MB    6 months ago    
+qwen3.6:35b                                                   07d35212591f    23 GB     6 months ago    
+translategemma:12b                                            c2f9a9ca1ec7    8.1 GB    9 months ago    
+((myenv) ) m@m-HP-Z440-Workstation:~/Desktop/translate$ pip list
+Package        Version
+-------------- --------
+brotli         1.2.1
+cffi           2.1.1
+cssselect2     0.10.1
+flatbuffers    25.12.19
+fonttools      4.68.0
+Markdown       3.11.2
+networkx       3.7
+numpy          2.5.4
+onnxruntime    1.31.1
+packaging      26.3
+pillow         13.0.0
+pip            25.0.1
+protobuf       7.36.2
+psutil         7.2.2
+pycparser      3.12
+pydyf          0.13.0
+pymupdf        2.1
+pymupdf_layout 2.1
+pymupdf4llm    2.1
+pyphen         0.18.1
+PyYAML         6.0.3
+tabulate       0.10.0
+tinycss2       1.5.1
+tinyhtml5      2.1.0
+weasyprint     70.0
+webencodings   0.6.1
+zopfli         0.4.3
+((myenv) ) m@m-HP-Z440-Workstation:~/Desktop/translate$ history
+ 
+
+ 1953  python3.12 -m venv myenv
+ 1954  source myenv/bin/activate
+ 1955  ls
+ 1956  pip install -r requirements.txt
+ 1957  python pdf_book_arabic.py "1_1-5.pdf" --output-dir "./translated_book"
+ 1958  python pdf_book_arabic.py "a.pdf" --output-dir "./translated_book1"
+ 1959  python pdf_book_arabic.py "aa.pdf" --output-dir "./translated_book2"
+ 1960  python pdf_book_arabic.py "z.pdf" --output-dir "./translated_book3"
+ 1961  ollama list
+ 1962  pip list
+ 1963  history
+((myenv) ) m@m-HP-Z440-Workstation:~/Desktop/translate$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+m@m-HP-Z440-Workstation:~/Desktop/translate$ python3.12 -m venv myenv
+m@m-HP-Z440-Workstation:~/Desktop/translate$ source myenv/bin/activate
+((myenv) ) m@m-HP-Z440-Workstation:~/Desktop/translate$ ls
+ myenv                requirements.txt
+ pdf_book_arabic.py  'ترجمة كتاب PDF إلى العربية باستخدام Ollama.md'
+((myenv) ) m@m-HP-Z440-Workstation:~/Desktop/translate$ pip install -r requirements.txt
+Collecting PyMuPDF>=1.24.0 (from -r requirements.txt (line 1))
+  Downloading pymupdf-2.1-cp311-abi3-manylinux_2_28_x86_64.whl.metadata (26 kB)
+Collecting Markdown>=3.6 (from -r requirements.txt (line 2))
+  Downloading markdown-3.11.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting WeasyPrint>=62.0 (from -r requirements.txt (line 3))
+  Downloading weasyprint-70.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting networkx (from PyMuPDF>=1.24.0->-r requirements.txt (line 1))
+  Using cached networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+Collecting numpy (from PyMuPDF>=1.24.0->-r requirements.txt (line 1))
+  Using cached numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting onnxruntime (from PyMuPDF>=1.24.0->-r requirements.txt (line 1))
+  Downloading onnxruntime-1.31.1-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (5.8 kB)
+Collecting pyyaml (from PyMuPDF>=1.24.0->-r requirements.txt (line 1))
+  Using cached pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting pymupdf-layout==2.1 (from PyMuPDF>=1.24.0->-r requirements.txt (line 1))
+  Downloading pymupdf_layout-2.1-py3-none-any.whl.metadata (657 bytes)
+Collecting psutil (from PyMuPDF>=1.24.0->-r requirements.txt (line 1))
+  Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+Collecting tabulate (from PyMuPDF>=1.24.0->-r requirements.txt (line 1))
+  Using cached tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)
+Collecting pymupdf4llm==2.1 (from PyMuPDF>=1.24.0->-r requirements.txt (line 1))
+  Downloading pymupdf4llm-2.1-py3-none-any.whl.metadata (648 bytes)
+Collecting pydyf>=0.11.0 (from WeasyPrint>=62.0->-r requirements.txt (line 3))
+  Downloading pydyf-0.13.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting cffi>=0.6 (from WeasyPrint>=62.0->-r requirements.txt (line 3))
+  Using cached cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+Collecting tinyhtml5>=2.0.0b1 (from WeasyPrint>=62.0->-r requirements.txt (line 3))
+  Downloading tinyhtml5-2.1.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting tinycss2>=1.5.0 (from WeasyPrint>=62.0->-r requirements.txt (line 3))
+  Downloading tinycss2-1.5.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting cssselect2>=0.8.0 (from WeasyPrint>=62.0->-r requirements.txt (line 3))
+  Downloading cssselect2-0.10.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting Pyphen>=0.9.1 (from WeasyPrint>=62.0->-r requirements.txt (line 3))
+  Downloading pyphen-0.18.1-py3-none-any.whl.metadata (3.4 kB)
+Collecting Pillow>=9.1.0 (from WeasyPrint>=62.0->-r requirements.txt (line 3))
+  Downloading pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting fonttools>=4.59.2 (from fonttools[woff]>=4.59.2->WeasyPrint>=62.0->-r requirements.txt (line 3))
+  Downloading fonttools-4.68.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (139 kB)
+Collecting pycparser (from cffi>=0.6->WeasyPrint>=62.0->-r requirements.txt (line 3))
+  Downloading pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+Collecting webencodings (from cssselect2>=0.8.0->WeasyPrint>=62.0->-r requirements.txt (line 3))
+  Downloading webencodings-0.6.1-py3-none-any.whl.metadata (3.4 kB)
+Collecting brotli>=1.2.1 (from fonttools[woff]>=4.59.2->WeasyPrint>=62.0->-r requirements.txt (line 3))
+  Downloading brotli-1.2.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.1 kB)
+Collecting zopfli>=0.1.4 (from fonttools[woff]>=4.59.2->WeasyPrint>=62.0->-r requirements.txt (line 3))
+  Downloading zopfli-0.4.3-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.5 kB)
+Collecting flatbuffers (from onnxruntime->PyMuPDF>=1.24.0->-r requirements.txt (line 1))
+  Using cached flatbuffers-25.12.19-py2.py3-none-any.whl.metadata (1.0 kB)
+Collecting packaging (from onnxruntime->PyMuPDF>=1.24.0->-r requirements.txt (line 1))
+  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting protobuf>=4.25.8 (from onnxruntime->PyMuPDF>=1.24.0->-r requirements.txt (line 1))
+  Using cached protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+Downloading pymupdf-2.1-cp311-abi3-manylinux_2_28_x86_64.whl (69.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.0/69.0 MB 3.6 MB/s eta 0:00:00
+Downloading pymupdf_layout-2.1-py3-none-any.whl (1.0 kB)
+Downloading pymupdf4llm-2.1-py3-none-any.whl (1.0 kB)
+Downloading markdown-3.11.2-py3-none-any.whl (114 kB)
+Downloading weasyprint-70.0-py3-none-any.whl (328 kB)
+Using cached cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+Downloading cssselect2-0.10.1-py3-none-any.whl (15 kB)
+Downloading fonttools-4.68.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 3.5 MB/s eta 0:00:00
+Downloading pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 3.5 MB/s eta 0:00:00
+Downloading pydyf-0.13.0-py3-none-any.whl (8.1 kB)
+Downloading pyphen-0.18.1-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 3.5 MB/s eta 0:00:00
+Downloading tinycss2-1.5.1-py3-none-any.whl (28 kB)
+Downloading tinyhtml5-2.1.0-py3-none-any.whl (39 kB)
+Using cached networkx-3.7-py3-none-any.whl (2.1 MB)
+Using cached numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+Downloading onnxruntime-1.31.1-cp312-cp312-manylinux_2_28_x86_64.whl (23.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.8/23.8 MB 3.5 MB/s eta 0:00:00
+Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Using cached pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+Using cached tabulate-0.10.0-py3-none-any.whl (39 kB)
+Downloading brotli-1.2.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 3.5 MB/s eta 0:00:00
+Using cached protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl (343 kB)
+Downloading webencodings-0.6.1-py3-none-any.whl (8.7 kB)
+Downloading zopfli-0.4.3-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (829 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 829.4/829.4 kB 3.4 MB/s eta 0:00:00
+Using cached flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+Installing collected packages: flatbuffers, brotli, zopfli, webencodings, tabulate, pyyaml, Pyphen, pydyf, pycparser, psutil, protobuf, Pillow, packaging, numpy, networkx, Markdown, fonttools, tinyhtml5, tinycss2, onnxruntime, cffi, cssselect2, WeasyPrint, pymupdf4llm, pymupdf-layout, PyMuPDF
+Successfully installed Markdown-3.11.2 Pillow-13.0.0 PyMuPDF-2.1 Pyphen-0.18.1 WeasyPrint-70.0 brotli-1.2.1 cffi-2.1.1 cssselect2-0.10.1 flatbuffers-25.12.19 fonttools-4.68.0 networkx-3.7 numpy-2.5.4 onnxruntime-1.31.1 packaging-26.3 protobuf-7.36.2 psutil-7.2.2 pycparser-3.12 pydyf-0.13.0 pymupdf-layout-2.1 pymupdf4llm-2.1 pyyaml-6.0.3 tabulate-0.10.0 tinycss2-1.5.1 tinyhtml5-2.1.0 webencodings-0.6.1 zopfli-0.4.3
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+((myenv) ) m@m-HP-Z440-Workstation:~/Desktop/translate$ python pdf_book_arabic.py "1_1-5.pdf" --output-dir "./translated_book"
+/home/m/Desktop/translate/myenv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+Extracted 5 page(s) to translated_book/book.md; images: translated_book/images
+Translating page 2/6...
+Translating page 3/6...
+Translating page 4/6...
+Translating page 5/6...
+Translating page 6/6...
+Arabic Markdown saved to translated_book/book_ar.md
+PDF saved to translated_book/book_ar.pdf
+((myenv) ) m@m-HP-Z440-Workstation:~/Desktop/translate$ ^C
+((myenv) ) m@m-HP-Z440-Workstation:~/Desktop/translate$ python pdf_book_arabic.py "a.pdf" --output-dir "./translated_book1"
+/home/m/Desktop/translate/myenv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+Extracted 7 page(s) to translated_book1/book.md; images: translated_book1/images
+Translating page 2/8...
+Translating page 3/8...
+Translating page 4/8...
+Translating page 5/8...
+Translating page 6/8...
+Translating page 7/8...
+Translating page 8/8...
+Arabic Markdown saved to translated_book1/book_ar.md
+PDF saved to translated_book1/book_ar.pdf
+((myenv) ) m@m-HP-Z440-Workstation:~/Desktop/translate$ python pdf_book_arabic.py "aa.pdf" --output-dir "./translated_book2"
+/home/m/Desktop/translate/myenv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+Extracted 7 page(s) to translated_book2/book.md; images: translated_book2/images
+Translating page 2/8...
+Translating page 3/8...
+Translating page 4/8...
+Translating page 5/8...
+Translating page 6/8...
+Translating page 7/8...
+Translating page 8/8...
+Arabic Markdown saved to translated_book2/book_ar.md
+PDF saved to translated_book2/book_ar.pdf
+((myenv) ) m@m-HP-Z440-Workstation:~/Desktop/translate$ python pdf_book_arabic.py "z.pdf" --output-dir "./translated_book3"
+/home/m/Desktop/translate/myenv/lib/python3.12/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+Extracted 1 page(s) to translated_book3/book.md; images: translated_book3/images
+Translating page 2/2...
+Arabic Markdown saved to translated_book3/book_ar.md
+PDF saved to translated_book3/book_ar.pdf
+((myenv) ) m@m-HP-Z440-Workstation:~/Desktop/translate$ 
+
+
+
+
+
+
+
+
+
+
+
+بناءً على فحص الملفات الثلاثة (الأصل الإنجليزي، وترجمة Google، وترجمة الذكاء الاصطناعي عبر Markdown):
+أولاً: هل تُرجم النص كاملاً؟
+نصوص المقالات ورسائل القراء وهيئة التحرير: نعم، تُرجمت بالكامل بنسبة 100% في كلتا النسختين، ولا يوجد أي مقال أو فقرة رئيسية مفقودة أو محذوفة.
+النصوص التي لم تُترجم في النسختين:
+نص الكاريكاتير الساخر (صفحة 7 الأصلية / صفحة 12 في النسخة الثالثة): الكلام المكتوب داخل بالون الحديث بالصورة ("SO THE GOOD NEWS IS...") ظل بالإنجليزية لأنه مدمج داخل الصورة وليس نصاً قابلاً للاستخراج.
+الإعلانات المصورة (صفحة 4 و صفحة 6): إعلانات India Today و AstroTak بقيت كصور إعلانية دون تعريب لمحتواها الداخلي.
+ثانياً: مقارنة تفصيلية بين الترجمتين
+وجه المقارنة	ترجمة Google (الملف الثاني)	ترجمة الذكاء الاصطناعي عبر MD (الملف الثالث)
+1. الفهم والسياق اللغوي	ضعيف وحرفي وفيه أخطاء سياقية فادحة:
+• ترجم عناوين المقالات في صفحة رسائل القراء على أنها "أغنية" (مثل: أغنية "ذكريات يونيو" و أغنية "أريد أن أسامح")، بينما هي مقالات مجلة وليست أغاني!
+• ترجمات حرفية وركيكة لبعض التعبيرات الاصطلاحية.	ممتاز ومتفوق جداً سياقياً:
+• فهم طبيعة المحتوى وترجمها بدقة: (مقالة "ذكريات شهر يونيو" و مقالة "أريد أن أسامح").
+• صياغة الجمل باللغة العربية أكثر فصاحة ومرونة وتماسكاً كأنها كُتبت بالعربية أصلاً.
+2. التنسيق والشكل العام (Layout)	حافظ على شكل المجلة الأصلي لكن بتشوهات كبيرة:
+• حاول وضع النص العربي في نفس أماكن النص الإنجليزي؛ مما تسبب في تداخل نصوص كارثي (خاصة في صفحة 5 حيث رُكبت الأسطر فوق بعضها وأصبحت غير مقروءة).	تحول إلى مستند نصي ممتد (13 صفحة بدلاً من 7):
+• فقد تصميم صفحات المجلة وألوانها وأعمدتها.
+• الميزة الكبرى: النص نظيف تماماً ومقروء بالكامل دون أي تداخل في الأسطر أو اختفاء للكلمات.
+3. اتجاه النص وأسماء الأعلام (RTL Issues)	عرّب أغلب الأسماء بشكل تلقائي، لكن أحياناً تظهر رموز مشوهة في علامات الترقيم والأرقام.	به مشكلة شائعة عند التحويل إلى Markdown ثم PDF وهي انعكاس ترتيب الكلمات الإنجليزية والأسماء (مثلاً: كتب Sharma Manoj بدلاً من Manoj Sharma، و Circus Connaught 9-K بدلاً من K-9 Connaught Circus).
+الخلاصة والتوصية:
+من حيث جودة اللغة والمعنى: ترجمة الذكاء الاصطناعي عبر Markdown (الملف الثالث) أفضل بمراحل كثيرة من ترجمة Google؛ لأنها تفهم السياق، وتتجنب الأخطاء الساذجة (مثل اعتبار المقالات "أغاني")، وصياغتها الصحفية راقية جداً.
+من حيث العيوب:
+Google: يعيبه تداخل الأسطر والنصوص فوق بعضها (صفحة 5 غير مقروءة تقريباً) وركاكة الصياغة.
+Markdown/الذكاء الاصطناعي: يعيبه فقدان تصميم المجلة البصري (Layout) وانعكاس ترتيب الأسماء الإنجليزية، لكنه يضمن لك قراءة النص كاملاً بدقة وفهم سليم.
+37s
+Google AI models may make mistakes, so double-check outputs.
+Use Arrow Up and Arrow Down to select a turn, Enter to jump to it, and Escape to return to the chat.
+
